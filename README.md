@@ -85,7 +85,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     Checks run command exited with error code of 1
     ```
 1. ✅ Review and fix the error<br>
-    Our new policy check flagged a changeset as an error. ⚠️ **Note:** notice the error code matches the severity we set!
+    Our new policy check flagged a changeset as an error. ⚠️ **Note:** the error code matches the severity we set!
     
     Lets open the "Checks-run-report.html" [operation report]((https://docs.liquibase.com/liquibase-pro/observability/operation-reports.html)) to troubleshoot the issue.
 
@@ -97,7 +97,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     ```
     Liquibase command 'flow' was executed successfully.
     ```
-    The history command, run at the end of the flow, displays all the database changes Liquibase has deployed. 🌟 **Bonus:** view the "Update-run-report.html" file to see the results of our deployment.
+    The history command, run at the end of the flow, displays all the database changes Liquibase has deployed. 🌟 **Bonus:** open the "Update-run-report.html" file to see the results of our deployment.
 1. 🔄 Re-run our flow<br>
     Liquibase tracks all database changes it deploys, so we won't redeploy. 
     ```
