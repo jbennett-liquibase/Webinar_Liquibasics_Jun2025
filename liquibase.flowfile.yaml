@@ -1,0 +1,74 @@
+###
+### Liquibase version: 4.30.0+
+###
+### Liquibase sales: https://www.liquibase.com/contact-us
+### Liquibase support: https://support.liquibase.com
+###
+
+###
+### Flow documentation: https://docs.liquibase.com/commands/flow/flow.html
+###
+
+###
+### Global variables used in the flowfile
+###
+globalVariables:
+
+###
+### Stages to execute
+###
+stages:
+  Verify:
+    actions:
+      #
+      # Validate database connection
+      # https://docs.liquibase.com/commands/change-tracking/connect.html
+      #
+      - type: liquibase
+        command: connect
+      #
+      # View pending changes
+      # https://docs.liquibase.com/commands/change-tracking/status.html
+      #
+      - type: liquibase
+        command: status
+  PolicyChecks:
+    actions:
+      #
+      # Run policy checks
+      # https://docs.liquibase.com/liquibase-pro/policy-checks/home.html
+      #
+      - type: liquibase
+        command: checks run
+        cmdArgs: { report-enabled: "true", report-name: "Checks-run-report.html", checks-scope: "changelog, database", changeset-filter: "pending", auto-update: "on" }
+        globalArgs: { reports-open: "false" }
+  Deploy:
+    actions:
+      #
+      # Exit if no pending changes
+      # https://docs.liquibase.com/liquibase-pro/flow/home.html
+      #
+      - type: control
+        if: "status.changesetCount == 0"
+        command: exit
+        cmdArgs: { exitCode: "0", exitMessage: "Database is current!" }
+      #
+      # Update database
+      # https://docs.liquibase.com/commands/update/update.html
+      #
+      - type: liquibase
+        command: update
+        cmdArgs: { report-enabled: "true", report-name: "Update-run-report.html" }
+        globalArgs: { reports-open: "false" }
+
+###
+### Always execute
+###
+endStage:
+  actions:
+    #
+    # Show deployed changes
+    # https://docs.liquibase.com/commands/change-tracking/history.html
+    #
+    - type: liquibase
+      command: history
