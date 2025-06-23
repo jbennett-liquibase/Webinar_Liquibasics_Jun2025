@@ -38,7 +38,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     |--------|----------|
     | Short Name | NoDeleteWithoutWhere |
     | Severity | 1 |
-    | Search String | ``` (?is)(?=.*\b(delete)\b)(?!.*\b(where)\b).* ```|
+    | Search String | `(?is)(?=.*\b(delete)\b)(?!.*\b(where)\b).* ` |
     | Message | All DELETE statements must have a WHERE clause. |
     | Strip Comments| true |
     | PATH_FILTER_REGEX | |
