@@ -26,7 +26,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
 # 📋 Demo Steps
 1. ⌨️ Command/Terminal Prompt<br>
     Open a new command prompt/terminal window and change to the folder were the repository was cloned.
-1. 🧩 Regular Expression (regex) Policy Check<br>
+1. 🧩 Dynamic (regex) Policy Check<br>
     Liquibase has a command-line Wizard to assist in creating policy checks.
     Let's create a new one to look for delete statements which do not have a where clause.
     ```
@@ -48,7 +48,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     ```
     Liquibase command 'checks customize' was executed successfully.
     ```
-1. 🐍 Python Check<br>
+1. 🐍 Custom Python Check<br>
     The built-in and regex checks are very flexible but sometimes you need to create your own policy checks. With Liquibase Pro, you can build your own using Python. Let's create a new one using the same wizard.
     ```
     liquibase checks customize --check-name=CustomCheckTemplate

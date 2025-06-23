@@ -76,11 +76,11 @@
             referencedTableName="ORGANIZATIONS"/>
     </changeSet>
 
-    <!-- Remove or comment all lines after this comment -->
+    <!-- Remove or comment all lines after this comment for test drive step 5 -->
     <changeSet author="human_error" id="dml_remove_all_records" labels="release-1.3.0">
         <sql>DELETE FROM ORGANIZATIONS</sql>
         <rollback/>
     </changeSet>
-    <!-- Remove or comment all lines before this comment -->
+    <!-- Remove or comment all lines before this comment for test drive step 5 -->
 
 </databaseChangeLog>
