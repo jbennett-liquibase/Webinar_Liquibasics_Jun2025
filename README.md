@@ -13,19 +13,19 @@ A Pro key is required to utilize Policy Checks. A temporary key is provided for 
 If you need a new Pro key, you can request one [here](https://www.liquibase.com/trial).
 
 # ✔️ Pre-Demo Steps
+⚠️ **Note:** run all commands from the folder where the repository is cloned!
 1. Clone this repository
     * [Instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 1. Download and install Liquibase CLI
     * [Installation Link](https://www.liquibase.com/download)
-1. Open a command prompt (Windows) or terminal (Linux/Mac) and start an [H2 Database](https://contribute.liquibase.com/extensions-integrations/directory/database-tutorials/h2/)<br>
-  H2 is a temporary in-memory database suitable for testing
+1. Open a command prompt (Windows) or terminal (Linux/Mac) and start an [H2 Database](https://contribute.liquibase.com/extensions-integrations/directory/database-tutorials/h2/). H2 is a temporary in-memory database suitable for testing.
     ```
     liquibase init start-h2
     ```
     *Safe to close browser window but leave command prompt/terminal open*
 # 📋 Demo Steps
 1. ⌨️ Command/Terminal Prompt<br>
-    Open a new command prompt/terminal window and change to the folder were the repository was cloned.
+    Open a new command prompt/terminal window and change to the folder where the repository was cloned.
 1. 🧩 Dynamic (regex) Policy Check<br>
     Liquibase has a command-line Wizard to assist in creating policy checks.
     Let's create a new one to look for delete statements which do not have a where clause.
