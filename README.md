@@ -68,6 +68,10 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     ```
     Liquibase command 'checks customize' was executed successfully.
     ```
+    We can verify our new policy checks using the status command.
+    ```
+    liquibase checks show --check-status=enabled
+    ```
     Congratulations!!! You have created two new policy checks! 🎉
 1. 🚀 Ready for deployment!<br>
     We've configured our checks, so lets try a deployment.
