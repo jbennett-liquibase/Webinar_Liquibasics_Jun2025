@@ -22,7 +22,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     ```
     liquibase init start-h2
     ```
-⚠️ **Note:** Safe to close browser window but leave command prompt/terminal open
+⚠️ **Note:** Safe to close browser window but leave command prompt/terminal open!
 # 📋 Demo Steps
 1. ⌨️ Command/Terminal Prompt<br>
     Open a new command prompt/terminal window and change to the folder where the repository was cloned.
@@ -91,7 +91,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
 1. ✅ Review and fix the error<br>
     Our new policy check flagged a changeset as an error.<br>
     
-    ⚠️ **Note:** the error code matches the severity we set in step 2.
+    ⚠️ **Note:** the error code matches the severity we set in step 2!
     
     Lets open the "Checks-run-report.html" [operation report]((https://docs.liquibase.com/liquibase-pro/observability/operation-reports.html)) to troubleshoot the issue.
 
