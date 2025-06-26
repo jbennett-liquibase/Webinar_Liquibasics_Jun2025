@@ -93,7 +93,7 @@ If you need a new Pro key, you can request one [here](https://www.liquibase.com/
     
     ⚠️ **Note:** the error code matches the severity we set in step 2!
     
-    Lets open the "Checks-run-report.html" [operation report]((https://docs.liquibase.com/liquibase-pro/observability/operation-reports.html)) to troubleshoot the issue.
+    Lets open the "Checks-run-report.html" [operation report](https://docs.liquibase.com/liquibase-pro/observability/operation-reports.html) to troubleshoot the issue.
 
     Now that we know what happened, we can edit the [changelog.main.xml](changelog.main.xml) file and remove lines 80-83. Once this is done, save the file and re-run our flow file.
     ```
